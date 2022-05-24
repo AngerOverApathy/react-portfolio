@@ -1,11 +1,12 @@
 import React from 'react'
+import avatar from '../../assets/avatar.png'
 
 export default function About() {
   return (
     <div>
       <div class="about-me" id="about-me">
   <div class="about-me-border">
-    <img src="assets/img/avatar.png" width="550" height="400" alt="a pixel avatar of Jessica V" class="avatar" />
+    <img src={avatar} width="550" height="400" alt="a pixel avatar of Jessica V" class="avatar" />
 
   <div class="my-info">
     <h2>My name's Jess!</h2>
