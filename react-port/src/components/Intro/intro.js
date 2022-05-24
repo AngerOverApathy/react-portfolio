@@ -1,0 +1,17 @@
+import React from 'react'
+
+export default function Intro() {
+  return (
+    <div>
+      <div class="intro">
+        <div class="intro-container" id="starry">
+          <div class="dots">
+          <h1>Hi, I'm Jessica</h1>
+          <h2>I'm a Sacramento-based front-end developer</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
