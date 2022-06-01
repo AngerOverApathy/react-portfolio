@@ -1,8 +1,8 @@
 import React from "react";
-import React, { useState } from 'react';;
+import { useState } from 'react';
 
 function Contact() {
-    const [state, handleSubmit] = useForm("xknyyydk");
+    const [state, handleSubmit] = useForm();
     const [formState, setFormState] = useState({ name: '', email: '', message: '' });
     const { name, email, message } = formState;
   return (
