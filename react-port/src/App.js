@@ -1,29 +1,32 @@
 import React, { useState } from 'react'
+import {
+	BrowserRouter as Router,
+	Routes,
+	Route,
+	Switch,
+} from 'react-router-dom';
 import Intro from './components/Intro/intro';
 import About from './components/About/about'
-
-import './index.css'
+import Nav from './components/Nav/nav';
+import Contact from './components/Contact/contact';
+import Skills from './components/Skills/skills';
+import './index.css';
 
 function App() {
   const [currentPage, setCurrentPage] = useState("intro");
 
-  // const renderPage = () => {
-	// 	switch (currentPage) {
-  //     case "intro":
-	// 			return <Intro />;
-	// 		case "about":
-	// 			return <About />;
-	// 		case "portfolio":
-	// 			return <Portfolio />;
-	// 		default:
-	// 			return null;
-	// 	}
-	// };
-
-  return (
+return (
     <>
-    <Intro />
-    <About />
+	<Router>
+		<Intro/>
+		<Nav />
+		<Routes>
+			<Route path="about" element={<About />} />
+			{/* <Route path="skills" element={}/> */}
+			<Route path="skills" element={<Skills />} />
+			<Route path="contact" element={<Contact />} />
+		</Routes>
+	</Router>
     </>
   );
 }
